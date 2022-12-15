@@ -1,0 +1,506 @@
+@font-face {
+    font-family: 'open_sans_normal';
+    src: url(./fonts/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-Regular.ttf),
+        url(./fonts/Open_Sans/static/OpenSans_SemiCondensed/OpenSans_SemiCondensed-Regular.ttf);
+
+}
+
+@font-face {
+    font-family: 'open_sans_italic';
+    src: url(./fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf),
+        url(./fonts/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-Italic.ttf),
+        url(./fonts/Open_Sans/static/OpenSans_SemiCondensed/OpenSans_SemiCondensed-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'open_sans_bold';
+    src: url(./fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf),
+        url(./fonts/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-Bold.ttf),
+        url(./fonts/Open_Sans/static/OpenSans_SemiCondensed/OpenSans_SemiCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'open_sans_bold_italic';
+    src: url(./fonts/Open_Sans/static/OpenSans/OpenSans-BoldItalic.ttf),
+        url(./fonts/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-BoldItalic.ttf),
+        url(./fonts/Open_Sans/static/OpenSans_SemiCondensed/OpenSans_SemiCondensed-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Raleway_normal';
+    src: url(./fonts/Raleway/Raleway-VariableFont_wdth\,wght.ttf),
+        url(./fonts/Raleway/static/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Raleway_italic';
+    src: url(./fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf),
+        url(./fonts/Raleway/static/Raleway-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Raleway_bold';
+    src: url(./fonts/Raleway/static/Raleway-Bold.ttf);
+}
+
+
+@font-face {
+    font-family: 'Raleway_bold_italic';
+    src: url(./fonts/Raleway/static/Raleway-BoldItalic.ttf);
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+}
+
+
+*,
+*::after,
+*::before {
+    font-size: var(--fs-default-text-size);
+    font-family: var(--fm-open_sans_normal);
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* find here the font family */
+    --fm-open_sans_normal: 'open_sans_normal';
+    --fm-open_sans_bold: 'open_sans_bold';
+    --fm-open_sans_italic: 'open_sans_italic';
+    --fm-open_sans_bolditalic: 'open_sans_bolditalic';
+    --fm-raleway_normal: 'raleway_normal';
+    --fm-raleway_bold: 'raleway_bold';
+    --fm-raleway_italic: 'raleway_italic';
+    --fm-raleway_bolditalic: 'raleway_bolditalic';
+
+
+    /* font size and font height */
+    --fs-default-text-size: 1.5rem;
+    --fs-text-size-of-titles-1: 3.6rem;
+    --fs-title-text-size-2: 2.4rem;
+    --fs-text-size-of-headings-3: 1.8rem;
+    --lh-line-height: 2.0rem;
+    --ico-size: 2.5rem;
+    --ico-height: 2.3rem;
+
+
+    /* Color */
+    --clr-default-page-color: #eee;
+    --clr-gray-element-color: #eee;
+    --clr-header-background-color: #0c6588;
+    --clr-menu-background: #e2f7ff;
+    --clr-main-content-background: #fff;
+    --clr-footer-background-color: #333;
+    --clr-titles-color: #333;
+    --clr-text-color: #555;
+    --clr-header-text: #e2f7ff;
+    --clr-header-search_bar: #6abddf;
+    --clr-header-search_bar-text: #fff;
+    --clr-footer-text: #ddd;
+    --clr-links-and-buttons: #0c6588;
+    --clr-hover-links-and-buttons: #000;
+    --clr-footer-links: #eee;
+
+    /*Border*/
+    --bd-sm: 1px solid #eee;
+    --bd-md: 1px solid #ddd;
+    --bd-lg: 2px solid #ccc;
+
+    /*Shadow effect*/
+    --sd-sm: 0 0 1px rgba(0, 0, 0, 0.2);
+    --sd-md: 0 0 3px rgba(0, 0, 0, 0.3);
+    --sd-lg: 0 0 5px rgba(0, 0, 0, 0.4);
+    --sd-xl: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+    /*Dark theme*/
+
+    --clr-dt-page-background: #222;
+    --clr-dt-gray-elements-background: #444;
+    --clr-dt-menu-background: #0c6588;
+    --clr-dt-main-content-background-main: #333;
+    --clr-dt-footer-background-footer: #333;
+    --clr-dt-titles-colors: #fff;
+    --clr-dt-text-color: #ddd;
+    --clr-dt-color-links-and-buttons: #e2f7ff;
+    --clr-dt-hover-links-and-buttons: #fff;
+    --bd-dt-sm-border: 1px solid #666;
+    --bd-dt-md-border: 1px solid #555;
+    --bd-dt-lg-border: 2px solid #444;
+    --fs-dt-default-text-size: 1.6rem;
+    --lh-dt-line-height: 3.0rem
+}
+
+
+/**************************               ****************************
+                            UTILITIES CSS
+**********************************************************************/
+
+svg {
+    color: #fff;
+    width: var(--ico-size);
+    height: var(--ico-height);
+}
+
+h1 {
+    font-size: var(--fs-text-size-of-titles-1);
+}
+
+h2 {
+    font-size: var(--fs-text-size-of-titles-2);
+}
+
+h3 {
+    font-size: var(--fs-text-size-of-headings-3);
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.flex_column_gap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.2rem;
+    justify-content: space-between;
+
+}
+
+.flex_row_gap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.nobullets {
+    list-style: none;
+}
+
+.novisible {
+    display: none;
+}
+
+.title_little {
+    font-size: var(--fs-text-size-of-headings-3);
+    color: var(--clr-titles-color);
+
+}
+
+.accessibilty,
+.shop_list {
+    background-color: var(--clr-menu-background);
+    padding: 0.5rem;
+}
+
+.dotted_line::after {
+    content: repeat("...");
+}
+
+.reset {
+    padding-block: 0;
+    margin-block: 0;
+}
+
+.shop_list ul>li {
+    margin-bottom: 0.5rem;
+    flex-grow: 0.5;
+}
+
+.shop_list ul {
+    padding: 0;
+}
+
+.flex-position_display {
+    gap: 0.5rem 2rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0;
+}
+
+.shop_list .shop-title {
+    color: var(--clr-links-and-buttons);
+}
+
+.shop_list svg {
+    color: var(--clr-links-and-buttons);
+    position: relative;
+    bottom: -.8rem;
+    width: calc(var(--ico-size) - 0.6rem);
+    z-index: 1;
+
+}
+
+/* .shop_list div.scroll_menu_shop {
+
+   z-index: 2;
+
+} */
+
+.shop_list .shop-right1 {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    bottom: 10rem;
+
+}
+
+.shop_list .shop-right2 {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    bottom: 10rem;
+
+}
+
+.shop_list .shop-left {
+    position: fixed;
+    z-index: 2;
+    left:0 ;
+    bottom: 0;
+}
+
+.shop_list .flex_row {
+    gap: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.shop_list .flex_row>li {
+    min-width: 48%;
+    
+}
+
+
+.shop_list div.scroll_menu_shop {
+    margin-block: 0.5rem;
+    background-color: var(--clr-menu-background);
+    width: 100%;
+    height: fit-content;
+    overflow: auto;
+
+    padding: 1rem;
+}
+
+.shop_list div.scroll_menu_shop>ul ul {
+    padding: 0;
+
+}
+
+.shop_list div.scroll_menu_shop>ul>li {
+    padding: 2rem;
+
+}
+
+.shop_shelf.title_little ~ ul {
+    margin-block: 0.5rem;
+
+}
+
+.shop_shelf~ul {
+    margin-block: 0.5rem;
+
+}
+
+.shop_list div.scroll_menu_shop>ul>li>.shop_shelf {
+    margin-block: 0.5rem;
+
+}
+
+
+
+
+/*********************************...END...******************************/
+
+
+
+
+
+
+
+
+/**************************                  ****************************
+                            GENERALITIES CSS
+*************************************************************************/
+
+
+/* || Header and Main Navigation */
+
+header {
+    background-image: url("../../../public/ressources/images/header.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+
+header a {
+    text-decoration: none;
+    color: var(--clr-links-and-buttons);
+}
+
+.header_page>div {
+    padding: 0;
+    margin: 0;
+    color: var(--clr-header-text);
+}
+
+header .search-bar {
+    max-width: fit-content;
+    flex: 0 0 0.5;
+    background-color: var(--clr-header-search_bar);
+    opacity: .9;
+    padding: .5rem 2rem;
+    gap: 1rem;
+    color: var(--clr-header-text);
+    border-radius: 2.5rem;
+    margin-top: 1.5rem;
+
+}
+
+header .search-bar svg {
+    width: calc(var(--ico-size) - 0.6rem);
+}
+
+header .search-bar input::after,
+input::before {
+    content: url("./font_awesome/chevron.svg");
+    /* width: calc(var(--ico-size) - 0.6rem); */
+
+}
+
+/* header .search-bar svg:first-of-type::after,
+svg:first-of-type::before {
+    content: url("./font_awesome/chevron.svg");
+    /* width: calc(var(--ico-size) - 0.6rem); 
+
+} */
+
+.header_page>.user_item {
+    width: 15rem;
+    margin-top: 1rem;
+}
+
+.header_page>.user_item svg {
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 0.2rem;
+}
+
+header .search-bar input,
+select {
+    border: none;
+    background-color: transparent;
+    color: var(--clr-header-search_bar-text);
+    user-select: none;
+
+}
+
+header .search-bar input {
+    width: 15rem;
+    text-overflow: ellipsis;
+
+}
+
+header .search-bar select {
+    width: 7rem;
+}
+
+header .search-bar select option[value] {
+    color: var(--clr-text-color);
+}
+
+header .search-bar input::placeholder {
+    color: var(--clr-header-search_bar-text);
+
+}
+
+header .accessibilty>span {
+    display: block;
+    text-align: center;
+    padding-bottom: 0.7rem;
+}
+
+header .header_page {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+
+}
+
+header .header_page img {
+    width: 5rem;
+}
+
+header .shop_list {
+    padding: 1.5rem;
+}
+
+header .shop_list>ul>li {
+    min-width: 46%;
+    height: fit-content;
+}
+
+
+
+
+
+
+/***...END__header CSS...***/
+
+
+/****__FOOTER CSS__****/
+
+footer {
+    background-color: var(--clr-footer-background-color);
+}
+
+
+.footer_block {
+    color: var(--clr-footer-text);
+
+}
+
+.footer_item {}
+
+.footer_item p>a {
+    text-decoration: underline;
+}
+
+.sprite_container {}
+
+
+.fab {
+    opacity: 0.7;
+}
+
+.social_icon {
+    text-align: center;
+}
+
+.logo_author {}
+
+.author_copyright {}
+
+
+/***...END__footer CSS...***/
+
+
+
+/*********************************...END...******************************/
